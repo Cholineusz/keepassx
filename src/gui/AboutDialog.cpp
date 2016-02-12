@@ -19,7 +19,7 @@
 #include "ui_AboutDialog.h"
 
 #include "config-keepassx.h"
-#include "version.h"
+//#include "version.h"
 #include "core/FilePath.h"
 #include "crypto/Crypto.h"
 
@@ -38,12 +38,12 @@ AboutDialog::AboutDialog(QWidget* parent)
     m_ui->iconLabel->setPixmap(filePath()->applicationIcon().pixmap(48));
 
     QString commitHash;
-    if (!QString(GIT_HEAD).isEmpty()) {
-        commitHash = GIT_HEAD;
-    }
-    else if (!QString(DIST_HASH).contains("Format")) {
-        commitHash = DIST_HASH;
-    }
+//    if (!QString(GIT_HEAD).isEmpty()) {
+//        commitHash = GIT_HEAD;
+//    }
+//    else if (!QString(DIST_HASH).contains("Format")) {
+//        commitHash = DIST_HASH;
+//    }
 
     if (!commitHash.isEmpty()) {
         QString labelText = tr("Revision").append(": ").append(commitHash);

@@ -18,7 +18,6 @@
 #include <QCommandLineParser>
 #include <QFile>
 
-#include "config-keepassx.h"
 #include "core/Config.h"
 #include "core/Tools.h"
 #include "core/Translator.h"
@@ -36,7 +35,7 @@ int main(int argc, char** argv)
 
     Application app(argc, argv);
     Application::setApplicationName("keepassx");
-    Application::setApplicationVersion(KEEPASSX_VERSION);
+    //Application::setApplicationVersion(KEEPASSX_VERSION);
     // don't set organizationName as that changes the return value of
     // QStandardPaths::writableLocation(QDesktopServices::DataLocation)
 

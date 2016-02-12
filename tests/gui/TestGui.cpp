@@ -29,7 +29,7 @@
 #include <QToolBar>
 #include <QToolButton>
 
-#include "config-keepassx-tests.h"
+//#include "config-keepassx-tests.h"
 #include "core/Config.h"
 #include "core/Database.h"
 #include "core/Entry.h"

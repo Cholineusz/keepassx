@@ -23,7 +23,7 @@
 #include "core/Group.h"
 #include "crypto/Crypto.h"
 #include "format/KeePass2XmlReader.h"
-#include "config-keepassx-tests.h"
+//#include "config-keepassx-tests.h"
 
 QTEST_GUILESS_MAIN(TestDeletedObjects)
 
