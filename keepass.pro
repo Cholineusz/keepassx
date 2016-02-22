@@ -6,13 +6,20 @@ CONFIG += C++11
 
 LIBS += -lz
 android: {
-  INCLUDEPATH += 3rdParty/include
-  LIBS += -L$$PWD/3rdParty/lib/armv7 -lssl  -lgcrypt -lgpg-error
+    INCLUDEPATH += 3rdParty/include
+    LIBS += -L$$PWD/3rdParty/lib/armv7 -lssl  -lgcrypt -lgpg-error
 } blackberry: {
- INCLUDEPATH += $$PWD/3rdParty/BlackBerry/include
- LIBS += -lssl -lintl -liconv -L$$PWD/3rdParty/BlackBerry/lib -lgcrypt -lgpg-error
+    INCLUDEPATH += $$PWD/3rdParty/BlackBerry/include
+    LIBS += -lssl -lintl -liconv -L$$PWD/3rdParty/BlackBerry/lib -lgcrypt -lgpg-error
+
+} macx: {
+    INCLUDEPATH += $$PWD/3rdParty/MacOSX/include
+    LIBS += -L$$PWD/3rdParty/MacOSX/lib -lssl -lgcrypt -lgpg-error
+} ios: {
+    INCLUDEPATH += $$PWD/3rdParty/iOS/include
+    LIBS += -L$$PWD/3rdParty/iOS/lib -lssl -lgcrypt -lgpg-error
 } else {
-  LIBS += -lssl -lgcrypt
+    LIBS += -lssl -lgcrypt
 }
 
 INCLUDEPATH += \

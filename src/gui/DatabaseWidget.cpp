@@ -462,7 +462,7 @@ void DatabaseWidget::openUrlForEntry(Entry* entry)
 
     if (urlString.startsWith("cmd://")) {
         if (urlString.length() > 6) {
-            QProcess::startDetached(urlString.mid(6));
+            //QProcess::startDetached(urlString.mid(6));
         }
     }
     else {
