@@ -32,7 +32,7 @@ Q_SIGNALS:
     void error();
 
 protected:
-    void openDatabase() override;
+    void openDatabase() ;
 
 private Q_SLOTS:
     void processEditFinished(bool result);

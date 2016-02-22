@@ -33,7 +33,7 @@ class EntryView : public QTreeView
 
 public:
     explicit EntryView(QWidget* parent = nullptr);
-    void setModel(QAbstractItemModel* model) override;
+    void setModel(QAbstractItemModel* model) ;
     Entry* currentEntry();
     void setCurrentEntry(Entry* entry);
     Entry* entryFromIndex(const QModelIndex& index);
@@ -50,7 +50,7 @@ Q_SIGNALS:
     void entrySelectionChanged();
 
 protected:
-    void keyPressEvent(QKeyEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) ;
 
 private Q_SLOTS:
     void emitEntryActivated(const QModelIndex& index);

@@ -29,7 +29,7 @@ public:
     explicit DialogyWidget(QWidget* parent = nullptr);
 
 protected:
-    void keyPressEvent(QKeyEvent* e) override;
+    void keyPressEvent(QKeyEvent* e) ;
 
 private:
     bool clickButton(QDialogButtonBox::StandardButton standardButton);

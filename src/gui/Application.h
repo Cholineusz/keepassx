@@ -29,7 +29,7 @@ public:
     Application(int& argc, char** argv);
     void setMainWindow(QWidget* mainWindow);
 
-    bool event(QEvent* event) override;
+    bool event(QEvent* event) ;
 
 Q_SIGNALS:
     void openFile(const QString& filename);

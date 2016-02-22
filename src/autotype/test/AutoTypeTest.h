@@ -33,24 +33,24 @@ class AutoTypePlatformTest : public QObject,
     Q_INTERFACES(AutoTypePlatformInterface AutoTypeTestInterface)
 
 public:
-    QString keyToString(Qt::Key key) override;
+    QString keyToString(Qt::Key key) ;
 
-    bool isAvailable() override;
-    QStringList windowTitles() override;
-    WId activeWindow() override;
-    QString activeWindowTitle() override;
-    bool registerGlobalShortcut(Qt::Key key, Qt::KeyboardModifiers modifiers) override;
-    void unregisterGlobalShortcut(Qt::Key key, Qt::KeyboardModifiers modifiers) override;
-    int platformEventFilter(void* event) override;
-    int initialTimeout() override;
-    bool raiseWindow(WId window) override;
-    AutoTypeExecutor* createExecutor() override;
+    bool isAvailable() ;
+    QStringList windowTitles() ;
+    WId activeWindow() ;
+    QString activeWindowTitle() ;
+    bool registerGlobalShortcut(Qt::Key key, Qt::KeyboardModifiers modifiers) ;
+    void unregisterGlobalShortcut(Qt::Key key, Qt::KeyboardModifiers modifiers) ;
+    int platformEventFilter(void* event) ;
+    int initialTimeout() ;
+    bool raiseWindow(WId window) ;
+    AutoTypeExecutor* createExecutor() ;
 
-    void setActiveWindowTitle(const QString& title) override;
+    void setActiveWindowTitle(const QString& title) ;
 
-    QString actionChars() override;
-    int actionCount() override;
-    void clearActions() override;
+    QString actionChars() ;
+    int actionCount() ;
+    void clearActions() ;
 
     void addActionChar(AutoTypeChar* action);
     void addActionKey(AutoTypeKey* action);
@@ -69,8 +69,8 @@ class AutoTypeExecturorTest : public AutoTypeExecutor
 public:
     explicit AutoTypeExecturorTest(AutoTypePlatformTest* platform);
 
-    void execChar(AutoTypeChar* action) override;
-    void execKey(AutoTypeKey* action) override;
+    void execChar(AutoTypeChar* action) ;
+    void execKey(AutoTypeKey* action) ;
 
 private:
     AutoTypePlatformTest* const m_platform;

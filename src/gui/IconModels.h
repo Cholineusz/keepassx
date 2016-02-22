@@ -30,8 +30,8 @@ class DefaultIconModel : public QAbstractListModel
 public:
     explicit DefaultIconModel(QObject* parent = nullptr);
 
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const ;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const ;
 };
 
 class CustomIconModel : public QAbstractListModel
@@ -41,8 +41,8 @@ class CustomIconModel : public QAbstractListModel
 public:
     explicit CustomIconModel(QObject* parent = nullptr);
 
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const ;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const ;
     void setIcons(const QHash<Uuid, QPixmap>& icons, const QList<Uuid>& iconsOrder);
     Uuid uuidFromIndex(const QModelIndex& index) const;
     QModelIndex indexFromUuid(const Uuid& uuid) const;

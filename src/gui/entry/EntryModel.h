@@ -40,15 +40,15 @@ public:
     Entry* entryFromIndex(const QModelIndex& index) const;
     QModelIndex indexFromEntry(Entry* entry) const;
 
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
-    Qt::DropActions supportedDropActions() const override;
-    Qt::DropActions supportedDragActions() const override;
-    Qt::ItemFlags flags(const QModelIndex& modelIndex) const override;
-    QStringList mimeTypes() const override;
-    QMimeData* mimeData(const QModelIndexList& indexes) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const;
+    int columnCount(const QModelIndex& parent = QModelIndex()) const;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+    Qt::DropActions supportedDropActions() const;
+    Qt::DropActions supportedDragActions() const;
+    Qt::ItemFlags flags(const QModelIndex& modelIndex) const;
+    QStringList mimeTypes() const;
+    QMimeData* mimeData(const QModelIndexList& indexes) const;
 
     void setEntryList(const QList<Entry*>& entries);
 

@@ -30,7 +30,7 @@ public:
     explicit AutoTypeSelectView(QWidget* parent = nullptr);
 
 protected:
-    void mouseMoveEvent(QMouseEvent* event) override;
+    void mouseMoveEvent(QMouseEvent* event) ;
 
 private Q_SLOTS:
     void selectFirstEntry();

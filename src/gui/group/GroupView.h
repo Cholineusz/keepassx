@@ -31,7 +31,7 @@ class GroupView : public QTreeView
 public:
     explicit GroupView(Database* db, QWidget* parent = nullptr);
     void changeDatabase(Database* newDb);
-    void setModel(QAbstractItemModel* model) override;
+    void setModel(QAbstractItemModel* model) ;
     Group* currentGroup();
     void setCurrentGroup(Group* group);
     void expandGroup(Group* group, bool expand = true);
@@ -47,7 +47,7 @@ private Q_SLOTS:
     void modelReset();
 
 protected:
-    void dragMoveEvent(QDragMoveEvent* event) override;
+    void dragMoveEvent(QDragMoveEvent* event) ;
 
 private:
     void recInitExpanded(Group* group);

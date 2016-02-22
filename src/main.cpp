@@ -26,6 +26,9 @@
 #include "gui/MainWindow.h"
 #include "gui/MessageBox.h"
 
+#include <QStyle>
+#include <QStyleFactory>
+
 int main(int argc, char** argv)
 {
 #ifdef QT_NO_DEBUG
@@ -38,6 +41,8 @@ int main(int argc, char** argv)
     //Application::setApplicationVersion(KEEPASSX_VERSION);
     // don't set organizationName as that changes the return value of
     // QStandardPaths::writableLocation(QDesktopServices::DataLocation)
+
+    QApplication::setStyle(QStyleFactory::create("windows"));
 
     QApplication::setQuitOnLastWindowClosed(false);
 

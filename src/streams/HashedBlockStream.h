@@ -31,12 +31,12 @@ public:
     HashedBlockStream(QIODevice* baseDevice, qint32 blockSize);
     ~HashedBlockStream();
 
-    bool reset() override;
-    void close() override;
+    bool reset() ;
+    void close() ;
 
 protected:
-    qint64 readData(char* data, qint64 maxSize) override;
-    qint64 writeData(const char* data, qint64 maxSize) override;
+    qint64 readData(char* data, qint64 maxSize) ;
+    qint64 writeData(const char* data, qint64 maxSize) ;
 
 private:
     void init();

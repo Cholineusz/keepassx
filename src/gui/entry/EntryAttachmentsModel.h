@@ -29,9 +29,9 @@ class EntryAttachmentsModel : public QAbstractListModel
 public:
     explicit EntryAttachmentsModel(QObject* parent = nullptr);
     void setEntryAttachments(EntryAttachments* entry);
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const ;
+    int columnCount(const QModelIndex& parent = QModelIndex()) const ;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const ;
     QString keyByIndex(const QModelIndex& index) const;
 
 private Q_SLOTS:

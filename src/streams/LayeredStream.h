@@ -28,12 +28,12 @@ public:
     explicit LayeredStream(QIODevice* baseDevice);
     virtual ~LayeredStream();
 
-    bool isSequential() const override;
-    bool open(QIODevice::OpenMode mode) override;
+    bool isSequential() const ;
+    bool open(QIODevice::OpenMode mode) ;
 
 protected:
-    qint64 readData(char* data, qint64 maxSize) override;
-    qint64 writeData(const char* data, qint64 maxSize) override;
+    qint64 readData(char* data, qint64 maxSize) ;
+    qint64 writeData(const char* data, qint64 maxSize) ;
 
     QIODevice* const m_baseDevice;
 

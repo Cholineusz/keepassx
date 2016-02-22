@@ -28,9 +28,9 @@ public:
     explicit WindowSelectComboBox(QWidget* parent = nullptr);
     void refreshWindowList();
 
-    void showPopup() override;
-    QSize sizeHint() const override;
-    QSize minimumSizeHint() const override;
+    void showPopup() ;
+    QSize sizeHint() const ;
+    QSize minimumSizeHint() const ;
 };
 
 #endif // KEEPASSX_WINDOWSELECTCOMBOBOX_H

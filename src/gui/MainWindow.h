@@ -44,8 +44,8 @@ public Q_SLOTS:
                       const QString& keyFile = QString());
 
 protected:
-     void closeEvent(QCloseEvent* event) override;
-     void changeEvent(QEvent* event) override;
+     void closeEvent(QCloseEvent* event) ;
+     void changeEvent(QEvent* event) ;
 
 private Q_SLOTS:
     void setMenuActionState(DatabaseWidget::Mode mode = DatabaseWidget::None);

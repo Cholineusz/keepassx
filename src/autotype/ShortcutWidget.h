@@ -31,8 +31,8 @@ public:
     void setShortcut(Qt::Key key, Qt::KeyboardModifiers modifiers);
 
 protected:
-    void keyPressEvent(QKeyEvent* event) override;
-    void keyReleaseEvent(QKeyEvent* event) override;
+    void keyPressEvent(QKeyEvent* event) ;
+    void keyReleaseEvent(QKeyEvent* event) ;
 
 private:
     void keyEvent(QKeyEvent* event);

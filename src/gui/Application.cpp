@@ -27,7 +27,7 @@
 class XcbEventFilter : public QAbstractNativeEventFilter
 {
 public:
-    bool nativeEventFilter(const QByteArray& eventType, void* message, long* result) override
+    bool nativeEventFilter(const QByteArray& eventType, void* message, long* result)
     {
         Q_UNUSED(result)
 

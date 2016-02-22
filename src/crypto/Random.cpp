@@ -25,7 +25,7 @@
 class RandomBackendGcrypt : public RandomBackend
 {
 public:
-    void randomize(void* data, int len) override;
+    void randomize(void* data, int len) ;
 };
 
 Random* Random::m_instance(nullptr);

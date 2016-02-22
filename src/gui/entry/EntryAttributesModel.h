@@ -29,12 +29,12 @@ class EntryAttributesModel : public QAbstractListModel
 public:
     explicit EntryAttributesModel(QObject* parent = nullptr);
     void setEntryAttributes(EntryAttributes* entryAttributes);
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-    bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
-    Qt::ItemFlags flags(const QModelIndex& index) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const ;
+    int columnCount(const QModelIndex& parent = QModelIndex()) const ;
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const ;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const ;
+    bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) ;
+    Qt::ItemFlags flags(const QModelIndex& index) const ;
     QModelIndex indexByKey(const QString& key) const;
     QString keyByIndex(const QModelIndex& index) const;
 

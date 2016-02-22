@@ -33,13 +33,13 @@ public:
                           SymmetricCipher::Mode mode, SymmetricCipher::Direction direction);
     ~SymmetricCipherStream();
     bool init(const QByteArray& key, const QByteArray& iv);
-    bool open(QIODevice::OpenMode mode) override;
-    bool reset() override;
-    void close() override;
+    bool open(QIODevice::OpenMode mode) ;
+    bool reset() ;
+    void close() ;
 
 protected:
-    qint64 readData(char* data, qint64 maxSize) override;
-    qint64 writeData(const char* data, qint64 maxSize) override;
+    qint64 readData(char* data, qint64 maxSize) ;
+    qint64 writeData(const char* data, qint64 maxSize) ;
 
 private:
     void resetInternalState();

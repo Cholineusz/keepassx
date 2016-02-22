@@ -31,10 +31,10 @@ class AutoTypeAssociationsModel : public QAbstractListModel
 public:
     explicit AutoTypeAssociationsModel(QObject* parent = nullptr);
     void setAutoTypeAssociations(AutoTypeAssociations* autoTypeAssociations);
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const ;
+    int columnCount(const QModelIndex& parent = QModelIndex()) const ;
+    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const ;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const ;
 
 public Q_SLOTS:
     void associationChange(int i);

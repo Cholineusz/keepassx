@@ -1,10 +1,19 @@
 TARGET = KeePass
 TEMPLATE = app
 
-QT += core gui widgets x11extras uitools concurrent
+QT += core gui widgets uitools concurrent
 CONFIG += C++11
 
-LIBS += -lX11 -lssl -lgcrypt -lz -lXi -lXtst
+LIBS += -lz
+android: {
+  INCLUDEPATH += 3rdParty/include
+  LIBS += -L$$PWD/3rdParty/lib/armv7 -lssl  -lgcrypt -lgpg-error
+} blackberry: {
+ INCLUDEPATH += $$PWD/3rdParty/BlackBerry/include
+ LIBS += -lssl -lintl -liconv -L$$PWD/3rdParty/BlackBerry/lib -lgcrypt -lgpg-error
+} else {
+  LIBS += -lssl -lgcrypt
+}
 
 INCLUDEPATH += \
     src \
